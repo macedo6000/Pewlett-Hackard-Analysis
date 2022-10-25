@@ -197,10 +197,43 @@ SELECT ri.emp_no,
 	ri.first_name,
 	ri.last_name,
 di.dept_name
---INTO sales_dev_dept
+INTO sales_dev_dept
 FROM retirement_info as ri
 LEFT JOIN dept_info as di
 ON ri.emp_no = di.emp_no
 WHERE di.dept_name IN ('Sales', 'Development');
 
-SELECT * FROM sales_dept_info;
+SELECT * FROM sales_dev_dept;
+
+-- Use Distinct with Orderby to remove duplicate rows
+SELECT DISTINCT ON (________) _____,
+______,
+______,
+______
+
+INTO nameyourtable
+FROM _______
+WHERE _______
+ORDER BY _____, _____ DESC;
+
+SELECT e.emp_no, e.first_name, e.last_name FROM employees as e;
+
+SELECT t.title, t.from_date, t.to_date FROM titles as t;
+
+SELECT DISTINCT ON e.emp_no, 
+	e.first_name, 
+	e.last_name, 
+t.title, 
+	t.from_date, 
+	t.to_date
+INTO retirement_titles
+FROM employees as e
+INNER JOIN titles as t
+ON (t.emp_no = e.emp_no)
+WHERE e.birth_date BETWEEN '1952-01-01' AND '1955-12-31'
+ORDER BY e.emp_no, 
+
+SELECT * FROM retirement_titles;
+-- DROP TABLE retirement_titles;
+SELECT 8 FROM 
+
